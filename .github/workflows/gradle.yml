@@ -36,8 +36,8 @@ jobs:
     - name: Build React frontend
       working-directory: frontend
         run:|
-          npm ci
-          npm run deploy:spring
+        npm ci
+        npm run deploy:spring
 
 
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
