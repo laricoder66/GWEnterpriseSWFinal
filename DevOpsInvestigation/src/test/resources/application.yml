@@ -1,11 +1,9 @@
 spring:
-  application:
-    name: DevOpsInvestigation
   datasource:
     driver-class-name: org.sqlite.JDBC
-    url: jdbc:sqlite:./users.db
+    url: jdbc:sqlite::memory:
   jpa:
     database-platform: org.hibernate.community.dialect.SQLiteDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: create-drop
     show-sql: true
