@@ -27,8 +27,15 @@ jobs:
       with:
         java-version: '21'
         distribution: 'temurin'
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: "22"
+        cache: "npm"
+        cache-dependency-path: frontend/package-lock.json
 
-    # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
+
+      # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
